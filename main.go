@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"golearning/ch5"
+	"time"
 )
 
 func main() {
@@ -48,7 +48,60 @@ func main() {
 	//fmt.Print(model.GetName())
 	//fmt.Print(ch5.GetName(model))
 
-	v := ch5.Vertex{3, 4}
-	ch5.Scale(&v, 10)
-	fmt.Println(ch5.Abs(v))
+	//v := ch5.Vertex{3, 4}
+	//p := &v
+	//fmt.Println(ch5.Abs(v))
+	//
+	//q := p
+	//
+	//ch5.Scale(p)
+	//ch5.Scale1(v)
+	//ch5.Scale(q)
+	//fmt.Println("指针修改值")
+	//fmt.Println(p)
+	//fmt.Println(q)
+	//fmt.Println(v)
+
+	//person := ch6.Person{"lnh", 23, "qwer1234"}
+	//fmt.Println(person.Fly("ccd"))
+	//plane := ch6.AirPlane{"飞机"}
+	//
+	//fmt.Println(plane.Fly("滑行"))
+	//
+	//fmt.Printf("(%v, %T)\n", plane, plane)
+	//
+	//var i interface{}
+	//fmt.Printf("(%v, %T)\n", i, i)
+	//i = 42
+	//fmt.Printf("(%v, %T)\n", i, i)
+	//
+	//ch6.Do(person)
+	//
+	//fmt.Println(person.String())
+	//
+	//addr := ch6.IPAddr{1, 2, 3, 4}
+	//fmt.Println(addr)
+
+	//i, err := strconv.Atoi(";")
+	//if err != nil {
+	//	fmt.Println(err)
+	//	return
+	//}
+	//fmt.Println("Converted integer:", i)
+
+	//sqrt, err := ch6.Sqrt(-2)
+	//if err != nil {
+	//	fmt.Println(err)
+	//	return
+	//}
+	//fmt.Println("Converted float:", sqrt)
+
+	//ch6.ReaderFromFile()
+	//ch6.WriteToFile()
+
+	go func() {
+		fmt.Println("1231")
+	}()
+
+	time.Sleep(1 * time.Second)
 }

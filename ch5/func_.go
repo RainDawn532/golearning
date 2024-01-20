@@ -2,7 +2,6 @@ package ch5
 
 import (
 	"fmt"
-	"math"
 )
 
 type Model struct {
@@ -20,14 +19,19 @@ func GetName(v Model) string {
 }
 
 type Vertex struct {
-	X, Y float64
+	X, Y int
 }
 
-func Abs(v Vertex) float64 {
-	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+func Abs(v Vertex) int {
+	return v.X
 }
 
-func Scale(v *Vertex, f float64) {
-	v.X = v.X * f
-	v.Y = v.Y * f
+func Scale1(v Vertex) {
+	v.X = v.X * v.X
+	v.Y = v.Y * v.Y
+}
+
+func Scale(v *Vertex) {
+	v.X = v.X * v.X
+	v.Y = v.Y * v.Y
 }
