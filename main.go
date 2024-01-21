@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "golearning/ch8"
 
 func main() {
 	//ch1.SayHello()
@@ -99,9 +96,18 @@ func main() {
 	//ch6.ReaderFromFile()
 	//ch6.WriteToFile()
 
-	go func() {
-		fmt.Println("1231")
-	}()
+	//go func() {
+	//	fmt.Println("1231")
+	//}()
+	//
+	//time.Sleep(1 * time.Second)
+	//
+	//ch7.RunWithChan()
+	//
+	//ch7.C()
 
-	time.Sleep(1 * time.Second)
+	//ch8.Func4Reflect(ch5.Model{Age: 23, Name: "lnh"})
+
+	//ch9.RunWithDelay()
+	ch8.GetHttp()
 }
