@@ -1,6 +1,6 @@
 package main
 
-import "golearning/ch8"
+import "golearning/ch4"
 
 func main() {
 	//ch1.SayHello()
@@ -109,5 +109,6 @@ func main() {
 	//ch8.Func4Reflect(ch5.Model{Age: 23, Name: "lnh"})
 
 	//ch9.RunWithDelay()
-	ch8.GetHttp()
+	//ch8.GetHttp()
+	ch4.MapFunc()
 }

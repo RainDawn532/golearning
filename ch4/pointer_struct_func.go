@@ -91,6 +91,11 @@ func MapFunc() {
 	}
 	i, flag := m2["rain"]
 	println(m, m2, i, flag)
+
+	if _, flag := m2["rain"]; flag {
+		fmt.Println("get a tips i, \n" +
+			" if _, flag := m2[\"rain\"]; flag {}")
+	}
 }
 
 func WordCount(s string) map[string]int {
