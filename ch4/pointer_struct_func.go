@@ -36,6 +36,12 @@ func G() {
 	nameArrays[3] = "test3"
 	nameArrays[4] = "test4"
 
+	values := [5]int{1, 2, 3, 2}
+	fmt.Println(values)
+
+	value := [...]int{123, 13, 213, 2131}
+	fmt.Println(value)
+
 	//切片
 	//切片就像数组的引用
 	//切片并不存储任何数据，它只是描述了底层数组中的一段。
@@ -49,13 +55,22 @@ func G() {
 	//2.888888809o00ol=[
 	q := []int{2, 3, 5, 7, 11, 13}
 	fmt.Println(len(q), cap(q), len(strings), cap(strings))
-	//
+	//3
 	ints := make([]int, 0, 5)
 	fmt.Println(len(ints), cap(ints))
 
 	for _, v := range q {
 		fmt.Printf("2**%s = %d\n", "index", v)
 	}
+	// tips:Go 切片扩容策略：如果切片的容量小1024个元素，于是扩容的时候就翻倍增加容量。
+	//上面那个例子也验证了这一情况，总容量从原来的4个翻倍到现在的8个。
+	//一旦元素个数超过1024个元素，那么增长因子就变成 1.25，即每次增加原来容量的1/4。
+	//本质引用数据  但是如果扩容了就不一样
+	array := [4]int{10, 20, 30, 40}
+	slice := array[0:2]           // 10 20
+	newSlice := append(slice, 50) // 10 20 50
+	newSlice[1] += 10             // 10 30 50
+	// 这里slice=[10 30]，array=[10 30 50 40]，入坑！！！
 }
 
 func Slice_() {

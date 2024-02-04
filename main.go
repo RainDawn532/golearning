@@ -1,6 +1,6 @@
 package main
 
-import "golearning/ch4"
+import "golearning/ch5"
 
 func main() {
 	//ch1.SayHello()
@@ -110,5 +110,12 @@ func main() {
 
 	//ch9.RunWithDelay()
 	//ch8.GetHttp()
-	ch4.MapFunc()
+	//ch4.MapFunc()
+
+	var model ch5.Model
+	//model := ch5.Model{1, "lnh"}
+
+	ch5.MethodSet(model) // 显示T方法集
+	println("---------------")
+	ch5.MethodSet(&model) // 显示*T方法集
 }

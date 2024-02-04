@@ -139,8 +139,9 @@ func Same(t1, t2 *Tree) bool {
 
 // SafeCounter 的并发使用是安全的。
 type SafeCounter struct {
-	v   map[string]int
-	mux sync.Mutex
+	v       map[string]int
+	mux     sync.Mutex
+	SyncMap sync.Map
 }
 
 // Inc 增加给定 key 的计数器的值。
